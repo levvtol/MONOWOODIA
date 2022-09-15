@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="wood"></p>
+<p id="money"></p>
+<button onclick="cut()">cut wood</button>
+<button onclick="valum()">Make this sheet</button>
+
+<p id="error"></p>
+
+
+
+<script>
+let wood = 1500;
+let money = 0;
+let up = 0;
+document.getElementById("wood").innerHTML = "Wood:" + wood;
+document.getElementById("money").innerHTML = "Money:" + money;
+
+function cut(){
+    wood = wood + 10;
+    document.getElementById("wood").innerHTML = "Wood:" + wood;
+
+}
+function valum(){
+if ( wood >= 50) {
+money = money + 100;
+wood = wood - 50;
+
+document.getElementById("wood").innerHTML = "Wood:" + wood;
+document.getElementById("money").innerHTML = "Money:" + money;
+}
+if (wood == 0) {
+    document.getElementById('error').innerHTML = "you haven't wood"
+}
+};
+
+
+
+</script>
+
+</body>
+</html> 
